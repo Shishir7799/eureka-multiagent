@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EUREKA - Breakthrough Discovery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔬 EUREKA</h1>
+            <p class="tagline">AI Breakthrough Discovery Engine</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <input 
+                    id="domain-input" 
+                    type="text" 
+                    placeholder="Enter research domain..."
+                    value="renewable_energy"
+                >
+                <button onclick="startDiscovery()" class="btn-primary">🚀 Discover</button>
+            </div>
+
+            <div id="progress" class="progress-section hidden">
+                <h2>Discovery in Progress...</h2>
+                <div id="agent-list"></div>
+            </div>
+
+            <div id="results" class="results-section hidden">
+                <h2>✅ Breakthrough Discovered!</h2>
+                <div id="content"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
