@@ -6,8 +6,6 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY main.py .
-
 ENV PORT=8080
 EXPOSE 8080
-
-CMD ["gunicorn", "--bind", ":8080", "app:app"]
+CMD ["python", "main.py"]

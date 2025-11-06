@@ -9,5 +9,5 @@ COPY main.py .
 
 ENV PORT=8080
 EXPOSE 8080
+CMD ["python", "main.py"]
 
-CMD ["gunicorn", "--bind", ":8080", "app:app"]
